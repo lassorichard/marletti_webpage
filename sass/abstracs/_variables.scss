@@ -1,0 +1,18 @@
+// breakpoints
+
+$bp-mobile: 400px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-huge: 1024px;
+
+$bps: (
+  'mobile': $bp-mobile,
+  'tablet': $bp-tablet,
+  'desktop': $bp-desktop,
+  'huge': $bp-huge
+
+);
+
+//font size rem
+
+$base-font-size: 16px;
