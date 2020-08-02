@@ -106,4 +106,21 @@ li {
             @include font-size (17px);
         }
     }
+
+    &__contact-footer {
+        color: $tom-thumb;
+        font-family: futuralt;
+
+        @include from (desktop) {
+            @include font-size (18px);
+        }
+    }
+}
+
+.dotted {
+    border-bottom: 1px dotted $tom-thumb;
+
+    @include from (tablet) {
+        border-bottom: 2px dotted $tom-thumb;
+    }
 }

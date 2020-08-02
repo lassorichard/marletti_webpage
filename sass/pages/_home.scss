@@ -104,3 +104,104 @@
         }
     }
 }
+
+.contact-footer {
+    background: $olivine;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+    text-align: center;
+
+    @include from (tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include from (desktop) {
+        grid-gap: 125px;
+    }
+
+    &__map {
+        
+        img {
+            width: 100%;
+            max-width: 180px;
+
+            @include from (mobile) {
+                max-width: 240px;
+            }
+            @include from (desktop) {
+                max-width: 320px;
+            }
+        }
+    }
+
+    &__container {
+        padding: 30px 0;
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+
+        @include from (mobile) {
+            max-width: 240px;
+        }
+        @include from (tablet) {
+            padding: initial;
+            max-width: none;
+        }
+
+        .contact-list {
+            display: flex;
+            align-items: center;
+            text-align: left;
+
+            &:not(:last-child) {
+                padding-bottom: 20px;
+            }
+
+            &--icon {
+                padding-right: 27px;
+
+                img {
+                    width: 100%;
+                    max-width: 27px;
+
+                    @include from (desktop) {
+                        width: 40px;
+                        max-width: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-media-footer {
+
+        &__container {
+            padding-top: 30px;
+
+            @include from (tablet) {
+                width: 100%;
+            }
+
+            a {
+                &:not(:last-child) {
+                    padding-right: 27px;
+                }
+            }
+            &--icon {
+                width: 100%;
+                max-width: 27px;
+
+                &:not(:last-child) {
+                    padding-right: 27px;
+                }
+
+                @include from (desktop) {
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+}
