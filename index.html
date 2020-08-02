@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/brand-head.png">
     <link rel="stylesheet" href="css/main.css">
     <title>Marletti</title>
 </head>
 <body>
-    <h1>
-        Hola mundo
-    </h1>
+    <header class="header-main padding">
+        <div class="header-main__icon">
+            <img id="bars" class="header-main__icon--hamburger-menu" src="img/menu.png">
+        </div>
+        <div class="header-main__brand">
+            <img class="header-main__brand--white" src="img/logo-1.png">
+            <img class="header-main__brand--color" src="img/logo-2.png">
+        </div>
+        <nav class="header-main__navegation">
+            <div class="language heading-header"><a class="" href="#">ENG</a></div>
+            <div class="menu active-menu heading-header">
+                <img id="close" class="menu__close" src="img/close.png">
+                <img class="header-main__brand--white" src="img/logo-1.png">
+                <ul class="menu__list">
+                    <li><a href="#" class="menu__link">Quienes somos</a></li>
+                    <li class="btn btn__header btn__header--green">
+                        <a href="#" class="menu__link">Variedades</a>
+                    </li>
+                    <li class="btn btn__header btn__header--blue">
+                        <a href="#" class="menu__link">Insumos</a>
+                    </li>
+                    <li><a href="#" class="menu__link">Contacto</a></li>
+                </ul>
+
+                <div class="social-media">
+                    <a class="social-media__icon" href="#"><img src="img/facebook.png"></a>
+                    <a class="social-media__icon" href="#"><img src="img/twitter.png"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

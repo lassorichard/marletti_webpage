@@ -1,3 +1,16 @@
+// colors
+
+$olivine: #9AC488;
+$seagull: #81C5E7;
+$emperor: #515151;
+
+
+// typography colors
+
+$white: #fff;
+$black: #000;
+$mine-shaft: #3D3D3D;
+
 // breakpoints
 
 $bp-mobile: 400px;
@@ -6,10 +19,10 @@ $bp-desktop: 1024px;
 $bp-huge: 1024px;
 
 $bps: (
-  'mobile': $bp-mobile,
-  'tablet': $bp-tablet,
-  'desktop': $bp-desktop,
-  'huge': $bp-huge
+    'mobile': $bp-mobile,
+    'tablet': $bp-tablet,
+    'desktop': $bp-desktop,
+    'huge': $bp-huge
 
 );
 
