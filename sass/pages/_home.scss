@@ -142,6 +142,7 @@
         width: 100%;
         max-width: 200px;
         margin: 0 auto;
+        
 
         @include from (mobile) {
             max-width: 240px;
@@ -149,6 +150,7 @@
         @include from (tablet) {
             padding: initial;
             max-width: none;
+            width: initial;
         }
 
         .contact-list {
