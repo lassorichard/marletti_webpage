@@ -1,91 +1,171 @@
 .header-main {
     display: flex;
-    padding-top: 16px;
     justify-content: space-between;
+    padding-top: 16px;
+
+    @include from (desktop) {
+        align-items: center;
+        background: $white;
+        height: 140px;
+        justify-content: space-between;
+        text-align: end;
+        width: 100%;
+    }
 
     &__icon {
 
+        @include from (desktop) {
+            display: none;
+        }
+
         &--hamburger-menu {
-            width: 100%;
             max-width: 20px;
+            width: 100%;
         }
     }
 
     &__brand {
+
         &--white {
-            width: 100%;
             max-width: 130px;
+            width: 100%;
+
+            @include from (desktop) {
+                display: none;
+            }
         }
         &--color {
             display: none;
-            width: 100%;
             max-width: 220px;
+            width: 100%;
+
+            @include from (desktop) {
+                display: inline-block;
+            }
         }
     }
 
     &__navegation {
+
+        @include from (desktop) {
+            width: 100%;
+            
+        }
+
+        .language {
+
+            @include from (desktop) {
+                margin-top: -30px;
+                padding-bottom: 18px;
+            }
+
+            a {
+                @include from (desktop) {
+                    color: $olivine;
+                }
+            }
+            
+        }
 
         .menu {
             align-items: center;
             background: $emperor;
             box-shadow: 5px 0px 5px 0px rgba($black,0.8);
             display: flex;
-            transform: translateX(-135%);
             flex-direction: column;
             height: 100vh;
             justify-content: space-evenly;
             left: 0;
             padding: 0 20px;
             position: absolute;
+            text-align: center;
             top: 0;
+            transform: translateX(-135%);
+            transition: all ease .4s;
             width: 75vw;
             z-index: 1000;
-            text-align: center;
-            transition: all ease .3s;
+
+            @include from (desktop) {
+                align-items: flex-end;
+                background: none;
+                box-shadow: initial;
+                flex-direction: column;
+                height: initial;
+                padding: initial;
+                position: initial;
+                transform: translateX(0);
+                width: 100%;
+            }
 
             &__list {
                 li {
                     &:not(:last-child) {
                         margin-bottom: 33px;
+                        
+                        @include from (desktop) {
+                            margin-bottom: initial;
+
+                            &:not(:last-child) {
+                                margin-right: 30px;
+                            }
+                        }
                     }
                 }
+
+                @include from (desktop) {
+                    align-items: center;
+                    display: flex;
+                }
+
             }
 
 
             &::after {
-                content: "";
                 background: rgba($emperor, .7);
+                content: "";
+                height: 100vh;
                 position: absolute;
                 right: -35%;
                 top: 0;
-                height: 100vh;
                 width: 100vw;
                 z-index: -1;
+
+                @include from (desktop) {
+                    content: initial;
+                }
             }
 
             &__close {
-                position: absolute;
                 margin: 17px;
-                width: 100%;
                 max-width: 20px;
-                top: 0;
+                position: absolute;
                 right: 0;
+                top: 0;
+                width: 100%;
+
+                @include from (desktop) {
+                    display: none;
+                }
             }
 
             .social-media {
-                display: flex;
                 align-items: center;
-                width: 100%;
+                display: flex;
                 justify-content: center;
+                width: 100%;
+
+                @include from (desktop) {
+                    display: none;
+                }
 
                 &__icon {
-                    height: 40px;
-                    width: 40px;
+                    align-items: center;
                     border-radius: 50%;
                     border: 2px solid $white;
                     display: flex;
-                    align-items: center;
+                    height: 40px;
                     justify-content: center;
+                    width: 40px;
 
                     &:not(:last-child) {
                         margin-right: 35px;

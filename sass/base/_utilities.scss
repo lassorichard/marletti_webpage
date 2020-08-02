@@ -1,3 +1,11 @@
 .padding {
     padding: 0 15px;
+
+    @include from (desktop) {
+        padding: 0 70px;
+    }
+
+    @include from (huge) {
+        padding: 0 125px;
+    }
 }
