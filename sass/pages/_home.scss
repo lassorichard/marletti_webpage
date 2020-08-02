@@ -16,4 +16,111 @@
         margin-top: 140px;
         padding-top: initial;
     }
-} 
+}
+
+.varieties {
+    background-image: linear-gradient(to right, rgba($white, .9)), url("../../img/portada-variedades.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+
+    @include from (desktop) {
+        height: 510px;
+    }
+
+    .varietie {
+
+        &__front-side {
+            position: relative;
+        }
+
+        &__back-side {
+            align-items: center;
+            background: rgba($black, .7);
+            border: 1px solid $white;
+            display: flex;
+            height: 90%;
+            justify-content: center;
+            left: 50%;
+            opacity: 0;
+            padding: 8px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all ease .5s;
+            width:90%;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &--hover {
+                border: 1px solid $white;
+                padding: 10px 12px;
+            }
+        }
+    }
+
+    .bx-controls-direction {
+        display: none;
+
+        @include from (desktop) {
+            display: inline-block;
+        }
+    }
+
+    .bx-default-pager{
+        
+        a {
+            border-radius: 50%!important;
+            border: 1px solid $olivine;
+            height: 13px!important;
+            width: 13px!important;
+
+            @include from (desktop) {
+                height: 20px!important;
+                width: 20px!important;
+            }
+        }
+    }
+    .bx-next {
+        background: url(../../img/right-control.png);
+        background-position: center center;
+        background-size: cover;
+        height: 40px;
+        right: -80px;
+        width: 40px;
+
+        &:hover {
+            background-position: initial;
+        }
+        &:focus {
+            background-position: initial;
+        }
+
+    }
+    .bx-prev {
+        background: url(../../img/left-control.png);
+        background-position: center center;
+        background-size: cover;
+        height: 40px;
+        left: -80px;
+        width: 40px;
+    }
+
+    .bx-pager-link {
+        background: transparent!important;
+    }
+
+    .active {
+        background: $olivine!important;
+    }
+
+    .bx-wrapper {
+        background: transparent!important;
+        border: none;
+        box-shadow: none;
+        margin: 0 auto;
+    }
+}

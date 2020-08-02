@@ -7,8 +7,6 @@ const bars = document.getElementById('bars'),
     menuList = document.querySelector('.menu'),
     body = document.querySelector('body');
 
-    console.log(menuList)
-
 // Event Listeners
 
 bars.addEventListener('click', (e) => {
@@ -34,4 +32,18 @@ close.addEventListener('click', (e) => {
         menuList.classList.add('active-menu');
         body.style.overflow = 'hidden';
     }
+});
+
+
+// bxslider
+
+$('.bxslider').bxSlider({
+    auto: true,
+    stopAutoOnClick: true,
+    pager: true,
+    minSlides: 2,
+    maxSlides: 4,
+    slideMargin: 16,
+    slideWidth: 220
+    
 });
