@@ -115,6 +115,16 @@ li {
             @include font-size (18px);
         }
     }
+
+    &__footer {
+        @include font-size (11px);
+        color: $olivine;
+        font-family: futuralt;
+
+        @include from (desktop) {
+            @include font-size (21px);
+        }
+    }
 }
 
 .dotted {

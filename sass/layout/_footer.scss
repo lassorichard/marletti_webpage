@@ -1,0 +1,12 @@
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    background: $mine-shaft;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    @include from (desktop) {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+}
