@@ -27,6 +27,7 @@ li {
     color: $white;
     font-family: IntroScriptR;
     font-weight: 100;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 
     @include from (desktop) {
         @include font-size (80px);
@@ -60,5 +61,26 @@ li {
 
     @include from (desktop) {
         @include font-size (14px);
+    }
+}
+
+.heading-tertiary {
+    @include font-size (33px);
+    font-weight: 100;
+    font-family: IntroScriptR;
+    color: $white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+
+    @include from (desktop) {
+        @include font-size (80px);
+    }
+}
+
+.paragraph {
+    @include font-size (12px);
+    font-family: FuturaLT book;
+
+    @include from (desktop) {
+        @include font-size (26px);
     }
 }

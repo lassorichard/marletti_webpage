@@ -9,7 +9,6 @@
     padding-bottom: 20px;
     padding-top: 100px;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 
     @include from (desktop) {
         height: 50vh;
@@ -23,11 +22,11 @@
     background-image: linear-gradient(to right, rgba($white, .9)), url("../../img/portada-variedades.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 320px;
+    background-size: cover; 
+    padding-bottom: 50px;
 
     @include from (desktop) {
-        height: 510px;
+        padding-bottom: 100px;
     }
 
     .varietie {
@@ -80,6 +79,7 @@
             width: 13px!important;
 
             @include from (desktop) {
+                border: 2px solid $olivine;
                 height: 20px!important;
                 width: 20px!important;
             }
@@ -123,6 +123,31 @@
         border: none;
         box-shadow: none;
         margin: 0 auto;
-        z-index: 0;
     }    
+}
+
+.philosophy {
+    background-image: linear-gradient(to right, rgba($emperor, .6)), url("../../img/insumos.jpg");
+    background-position: 30% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    @include from (desktop) {
+        padding-bottom: 60px;
+        padding-top: 60px;
+        padding-left: 50%;
+        background-position: center center;
+    }
+
+    &__paragraph {
+        color: $white;
+        padding: 15px 0;
+        width: 80%;
+
+        @include from (desktop) {
+            padding: 30px 0;
+        }
+    }
 }
