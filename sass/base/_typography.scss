@@ -21,3 +21,14 @@ li {
         }
     }
 }
+
+.heading-hero {
+    @include font-size (33px);
+    color: $white;
+    font-family: IntroScriptR;
+    font-weight: 100;
+
+    @include from (desktop) {
+        @include font-size (80px);
+    }
+}

@@ -1,0 +1,19 @@
+.hero {
+    align-items: center;
+    background-image: linear-gradient(to right, rgba($mine-shaft, .5)), url("../../img/portada.jpg");
+    background-position: top top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+
+    @include from (desktop) {
+        height: 50vh;
+        margin-top: 140px;
+        padding-top: initial;
+    }
+} 
