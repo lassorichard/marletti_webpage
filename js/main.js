@@ -58,3 +58,19 @@ $('.bxslider-publications').bxSlider({
     slideWidth: 600
     
 });
+
+// menu slider
+
+window.onscroll = function () {
+    let header= document.querySelector('.header-main'),
+        y = window.scrollY;
+        
+    let elmnt = header.offsetHeight
+    
+    if (y >= elmnt ) {
+        header.classList.add('active-overflow')
+    } else {
+        header.classList.remove('active-overflow')
+        header.style.transition = 'all ease .5s';
+    }
+};

@@ -73,4 +73,14 @@
     border: none;
     box-shadow: none;
     margin: 0 auto;
-}   
+} 
+
+.active-overflow {
+    background: rgba(0, 0, 0, .85);
+    transition: all ease .5s;
+
+    @include from(desktop) {
+        background: initial;
+        height: 120px!important;
+    }
+}
