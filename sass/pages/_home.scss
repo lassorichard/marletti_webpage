@@ -29,7 +29,7 @@
         padding-bottom: 100px;
     }
 
-    .varietie {
+    .variety {
 
         &__front-side {
             position: relative;
@@ -60,70 +60,7 @@
                 padding: 10px 12px;
             }
         }
-    }
-
-    .bx-controls-direction {
-        display: none;
-
-        @include from (desktop) {
-            display: inline-block;
-        }
-    }
-
-    .bx-default-pager{
-        
-        a {
-            border-radius: 50%!important;
-            border: 1px solid $olivine;
-            height: 13px!important;
-            width: 13px!important;
-
-            @include from (desktop) {
-                border: 2px solid $olivine;
-                height: 20px!important;
-                width: 20px!important;
-            }
-        }
-    }
-    .bx-next {
-        background: url(../../img/right-control.png);
-        background-position: center center;
-        background-size: cover;
-        height: 40px;
-        right: -80px;
-        width: 40px;
-
-        &:hover {
-            background-position: initial;
-        }
-        &:focus {
-            background-position: initial;
-        }
-
-    }
-    .bx-prev {
-        background: url(../../img/left-control.png);
-        background-position: center center;
-        background-size: cover;
-        height: 40px;
-        left: -80px;
-        width: 40px;
-    }
-
-    .bx-pager-link {
-        background: transparent!important;
-    }
-
-    .active {
-        background: $olivine!important;
-    }
-
-    .bx-wrapper {
-        background: transparent!important;
-        border: none;
-        box-shadow: none;
-        margin: 0 auto;
-    }    
+    } 
 }
 
 .philosophy {
@@ -152,6 +89,18 @@
         @include from (desktop) {
             padding: 30px 0;
             width: 100%;
+        }
+    }
+}
+
+.publications{
+    margin-bottom: 60px;
+    
+    .publication {
+        margin-bottom: 50px;
+
+        &__paragraph {
+            padding-bottom: 20px;
         }
     }
 }

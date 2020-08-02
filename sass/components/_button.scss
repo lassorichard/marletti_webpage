@@ -7,6 +7,7 @@
         border-radius: 6.88px;
         padding: 15px;
         width: 100%;
+        transition: all ease .3s;
 
         @include from (desktop) {
             padding: 18px;
@@ -20,9 +21,17 @@
 
         &--green {
             background: $olivine;
+
+            &:hover {
+                background: rgba($olivine, .7);
+            }
         }
         &--blue {
             background: $seagull;
+
+            &:hover {
+                background: rgba($seagull, .7);
+            }
         }
     }
 
@@ -48,6 +57,33 @@
 
         &:hover {
             background: rgba($black, .2);
+        }
+    }
+
+    &__secondary {
+        border-radius: 6.88px;
+        padding: 12px 29px;
+        width: 100%;
+        text-transform: uppercase;
+        transition: all ease .3s;
+        @include font-size (10px);
+
+        &:hover {
+            background: rgba($olivine, .7);
+        }
+
+        @include from (desktop) {
+            padding: 16px;
+        }
+
+        a {
+            color: $white;
+            font-family: FuturaLT Bold;
+            letter-spacing: 2px; 
+        }
+
+        &--green {
+            background: $olivine;
         }
     }
 }

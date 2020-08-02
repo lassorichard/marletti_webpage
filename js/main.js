@@ -47,3 +47,14 @@ $('.bxslider').bxSlider({
     slideWidth: 220
     
 });
+
+$('.bxslider-publications').bxSlider({
+    auto: true,
+    stopAutoOnClick: true,
+    pager: true,
+    minSlides: 1,
+    maxSlides: 2,
+    slideMargin: 16,
+    slideWidth: 600
+    
+});
