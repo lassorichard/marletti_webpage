@@ -16,7 +16,7 @@ li {
         text-transform: uppercase;
 
         @include from (desktop) {
-            @include font-size (16px)
+            @include font-size (16px);
             color: $dove-gray;
         }
     }

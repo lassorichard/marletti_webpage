@@ -10,6 +10,7 @@
         justify-content: space-between;
         text-align: end;
         width: 100%;
+        position: fixed;
     }
 
     &__icon {
@@ -116,7 +117,10 @@
                     align-items: center;
                     display: flex;
                 }
+            }
 
+            &__link {
+                
             }
 
 
