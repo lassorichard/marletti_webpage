@@ -5,65 +5,82 @@
 ## Repositorio
 
 1. Descargar repositorio:
->Encontrará dos ramas, master y develop, actualmente el código se encuentra mergeado a master
+>Encontrará dos ramas principales, master y develop, actualmente el código se encuentra mergeado a master.
 
 para master:
 ```bash
 git clone https://github.com/lassorichard/marletti_webpage.git
 ```
 
+2. El sítio se subió a una instancia en netlify desde mi repositorio y desde el siguiente link se puede visualizar desde cualquier dispotivo
+
+```bash
+https://xenodochial-booth-673c7a.netlify.app/
+```
+
+
 ## Información importante acerca del proyecto
 
-1. Tags semánticos usados basados en los estándares de HTML5
-2. Estilos para el responsive fueron creados usando diferentes breakpoints, mixins fueron creados para este propósito
+1. Mobile First como base fundamental en el desarrollo del proyecto
+2. Tags semánticos usados basados en los estándares de HTML5
+3. Como preprocesador de estilos se usó SASS, los diferentes componentes .scss están organizados dentro de /scss
+>Los archivos fueron organizados en diferentes carpetas: 
+    scss/abstracs se encuentran los archivos variables y mixins
+    scss/base se encuentran los archivos base, fonts, typography, utilities
+    scss/components se encuentra el archivo button
+    scss/layout se encuentran los archivos header y footer
+    scss/pages se encuentra el archivo
+4. Uso de mixins:
 
 ```bash
-$bp-mobile: 300px;
-$bp-tablet: 600px;
-$bp-desktop: 1000px;
+$bp-mobile: 400px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-huge: 1200px;
 ```
+> Para los breakpoints, se usaron dentro de los componentes scss con el fin de usar diferentes anchos, acá uno ejemplo:
 
->Uso de mixins:
-
-Para los breakpoints, se pueden usar dentro de los componentes scss con el fin de usar diferentes anchos, acá unos ejemplos:
 ```bash
-@inlude from(mobile) {
- //estilos correspondientes a la vista mobile
-}
-@inlude upto(tablet) {
+@inlude from(tablet) {
  //estilos correspondientes a la vista tablet
 }
-@inlude from(desktop) {
- //estilos correspondientes a tamaños desde desktop hasta retina
-}
 ```
 
-Para las fuentes, se creó un mixin el cuál convierte a rem los tamaños de fuente:
 ```bash
-en scss: @include font-size(20)
+$base-font-size: 16px;
+```
+> Para las fuentes, se creó un mixin el cuál convierte a rem los tamaños de fuente:
+
+```bash
+@inlude font-size(20px)
 rendered: font-size: 20px; and font-size: 1.25rem;
 ```
 
-3. Como preprocesador de estilos se usó SASS, los diferentes componentes .scss están organizados dentro de /assets/scss
->archivos como Color variables, Mixins, General Styles, Typography, Reset se encuentran alojados en /assets/scss/components
+6. La metodología utilizada para el preprocesador sass fue BEM (Block, Element, Modifier)
+7. Dentro del proyecto la utilizacion de CSS Flexbox fue crucial y tambien en pequeña proporción se utilizó CSS Gridbox.
+8. Para el slider de la sección "Conoce nuestras Variedades" y "Publicaciones y eventos" se hizo uso de la libreria bxSlider teniendo en cuenta el diseño responsive
+9. Los items de la sección "Publicaciones y eventos" fueron cargados por medio de un Json el cual se hizo uso de un hosting en linea para desarrollar este proyecto, el URL del archivo Json es: 
 
-4. Los productos se muestran en tarjetas, agrupados por tipo de producto dentro de los cuáles se muestra la siguiente información
-5. Tipo de producto
-6. Ícono correspondiente a cada producto
-7. Saldo del producto
-8. Versión maximizada de la información*
-9. Si es tarjeta de crédito el logo se mostrará correspondiente, si el número de producto empieza por 5 es mastercard, de lo contrario si es 4 será visa el logo que se mostrará
-10. El número de la tarjeta de crédito es enmascarado antes de ser renderizado, por este motivo en el DOM no será visible el número completo
-11. Formato de tarjetas **** **** **** ****
-12. Se realiza la validación para el pago, si el saldo total es diferente al saldo disponible muestra botón de pago
-13. Los productos que se muestran inicialmente son los relacionados a BANCO_1
-14. Se creó opción de "Mostrar otros productos" con la cuál se puede prender y apagar la función de mostrar todos los productos ó los iniciales referidos a BANCO_1
+```bash
+https://json.extendsclass.com/bin/44f9f614419b
+```
 
-### Tech stack
+10. La animación del menú fue desarrollada gracias a la integración de CSS y JS, haciendo posible un diseño fluido y al mismo tiempo bloqueando el scroll para poner en detalle el menú
+12. El header fue igualmente desarrollado gracias a la integración de CSS y JS, resaltando esta barra de navegación y ser asequible en cualquier lugar de la página web, tanto para mobile como para desktop
+13. Se crearon las etiquetas para el posicionamiento de la pagina web en los buscadores
 
-Nuxt.js
+## Notas
+Por limitación de tiempo hay algunas cosas que hubiera querido hacer:
+1. Creación del slider con JS puro desvinculando librerías
+2. Configuración del proyecto con paquetes npm para levantar un local host y poder servir al json de manera local
+3. Automatizar tareas de transpilación de scss y JS a los bundle
+4. Hacer cross browsing en diferentes dispositivos y navegadores
+5. Implementar un lógica de lazy loading para las imagenes optimizando así tiempo de carga y peso
+6. Configurar tareas de Unit Testing
+7. Hacer pruebas en screen reader para la accesibilidad
 
-NPM
+
+## Tech stack
 
 HTML5
 
@@ -73,10 +90,8 @@ SASS
 
 ES6
 
-VUE
+JS
 
-Axios
-
-Jest
+bxSlider
 
 ### Aprecio su tiempo leyendo este documento 
