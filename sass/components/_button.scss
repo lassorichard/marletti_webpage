@@ -61,12 +61,13 @@
     }
 
     &__secondary {
+        @include font-size (10px);
         border-radius: 6.88px;
+        max-width: 150px;
         padding: 12px 29px;
-        width: 100%;
         text-transform: uppercase;
         transition: all ease .3s;
-        @include font-size (10px);
+        width: 100%;
 
         &:hover {
             background: rgba($olivine, .7);

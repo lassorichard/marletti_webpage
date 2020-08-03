@@ -18,8 +18,11 @@
     }
 }
 
+.bx-wrapper img {
+    width: 100%;
+}
+
 .bx-default-pager{
-    
     @include from (desktop) {
         display: none;
     }
