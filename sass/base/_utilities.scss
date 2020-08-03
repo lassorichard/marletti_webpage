@@ -20,6 +20,10 @@
 
 .bx-default-pager{
     
+    @include from (desktop) {
+        display: none;
+    }
+
     a {
         border-radius: 50%!important;
         border: 1px solid $olivine;
