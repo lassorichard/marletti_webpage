@@ -1,6 +1,6 @@
 # Marletti Website
 
-> Developed for [Richard Lasso Ledesma]
+> Developed by [Richard Lasso Ledesma]
 
 ## Repository
 
